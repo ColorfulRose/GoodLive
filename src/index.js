@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-// import './assets/css/iconfont.css';
+// import App from './App';
+import './assets/iconfont/iconfont.css'
 import './assets/css/common.less';
 import AppRouter from './router/index';
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <AppRouter />
-  </React.StrictMode>,
+  </BrowserRouter>
+  ,
   document.getElementById('root')
 );
 

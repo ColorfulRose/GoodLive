@@ -1,7 +1,11 @@
 import React from "react";
+import HeaderNav from "../../components/HeaderNav";
 const Home = () => {
     return (
-        <div>home </div>
+        <div>
+            <HeaderNav></HeaderNav>
+            home
+        </div>
     )
 }
 export default Home
