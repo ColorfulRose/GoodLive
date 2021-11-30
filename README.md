@@ -11,3 +11,7 @@
 2.创建路由:
 - 安装依赖 npm install --save react-router-dom 
 - 配置AppRouter 文件    问题 router switch 是干什么的 ????
+当classname 需要动态变化的是
+
+
+<li key={index} className={classnames({ 'selected': currentIndex === index })} ></li>
