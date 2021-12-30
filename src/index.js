@@ -5,11 +5,15 @@ import './assets/iconfont/iconfont.css'
 import './assets/css/common.less';
 import AppRouter from './router/index';
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from './redux/store'
 
 ReactDOM.render(
-  <BrowserRouter>
-    <AppRouter />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      < AppRouter />
+    </BrowserRouter>
+  </Provider>
   ,
   document.getElementById('root')
 );
