@@ -56,6 +56,7 @@ router.get('/mock', (req, res) => {
     res.send(data)
 })
 
+
 // 详情页
 router.get('/details', (req, res) => {
     const id = url.parse(req.url, true).query.id

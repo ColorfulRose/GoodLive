@@ -10,6 +10,10 @@ const SearchList = (props) => {
 
     useEffect(() => {
         http()
+        return () => {
+            // setSearchData([])
+            // setHasMore(false)
+        }
     }, [props.search]) // eslint-disable-line react-hooks/exhaustive-deps
 
     function loadMoreHandle() {

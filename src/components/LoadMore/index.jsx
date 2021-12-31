@@ -7,7 +7,7 @@ const LoadMore = (props) => {
         // 获取视口高度
         let winHeight = document.documentElement.clientHeight
         let timer = null
-        window.addEventListener('scroll', () => {
+        function scrollHandle() {
             if (more.current) {
                 setLoadTop(more.current.getBoundingClientRect().top)
                 if (timer) {
@@ -19,9 +19,13 @@ const LoadMore = (props) => {
                         }
                     }, 300)
                 }
-
             }
-        })
+        }
+        window.addEventListener('scroll', scrollHandle)
+        return () => {
+            // window.removeEventListener('scroll', scrollHandle)
+            // clearTimeout(timer)
+        }
     }, [loadTop])  // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
